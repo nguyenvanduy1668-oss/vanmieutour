@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Miếu Mao Điền - Di Sản & Đạo Học</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1599708153386-62bf3f03328d?auto=format&fit=crop&q=80&w=1600') center/cover;
+        }
+        .accent-red { color: #8B0000; }
+        .bg-accent-red { background-color: #8B0000; }
+        .border-gold { border-color: #D4AF37; }
+        .text-gold { color: #D4AF37; }
+        
+        /* Video Container Styling */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* Tỉ lệ 16:9 */
+            background: #1a1a1a;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .video-wrapper video, .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* Hiệu ứng nổi bật cho vùng cần điền link */
+        .link-highlight {
+            border: 4px dashed #facc15 !important; /* Màu vàng chanh */
+            background-color: rgba(250, 204, 21, 0.1);
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #D4AF37;
+            border-radius: 50%;
+            position: absolute;
+            left: -34px;
+            top: 8px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-gray-900">
+
+    <!-- Thanh điều hướng -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold accent-red tracking-tight uppercase">Mao Điền <span class="text-red"> Temple of Literature </span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-semibold uppercase text-xs tracking-widest">
+                    <a href="#intro" class="hover:text-red-800 transition">Giới thiệu</a>
+                    <a href="#history" class="hover:text-red-800 transition">Lịch sử</a>
+                    <a href="#tour" class="hover:text-red-800 transition">Hành trình </a>
+                </div>
+                <button class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 font-bold uppercase text-xs">
+            <a href="#intro" class="block">Giới thiệu </a>
+            <a href="#history" class="block">Lịch sử </a>
+            <a href="#tour" class="block">Hành trình </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 drop-shadow-2xl">Văn Miếu Mao Điền</h1>
+            <p class="text-xl md:text-2xl mb-10 font-light italic opacity-90 tracking-wide">"Nơi hội tụ tinh hoa đạo học và truyền thống ngàn năm Xứ Đông"</p>
+            <a href="#tour" class="inline-block bg-accent-red hover:bg-red-900 text-white px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 border-2 border-gold font-bold uppercase tracking-widest shadow-xl">
+                Xem Video Tham Quan
+            </a>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="intro" class="py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <div class="rounded-2xl overflow-hidden shadow-2xl transform -rotate-1 hover:rotate-0 transition duration-500 border-4 border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="Văn Miếu Mao Điền" class="w-full h-[450px] object-cover">
+                </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-6">
+                <h2 class="text-4xl md:text-5xl font-bold accent-red">Tổng quan di tích</h2>
+                <div class="w-20 h-1 bg-gold"></div>
+                <p class="text-lg leading-relaxed text-gray-700 text-justify">
+                    Tọa lạc tại huyện Cẩm Giàng, tỉnh Hải Dương, "Văn miếu Mao Điền" – một trong những trung tâm Nho học tiêu biểu của vùng xứ Đông xưa. Nơi đây không chỉ là di tích lịch sử lâu đời, mà còn là biểu tượng cho truyền thống hiếu học và tinh thần tôn sư trọng đạo của người Việt.
+
+Được xây dựng từ thời thời Lê sơ, Văn Miếu là nơi thờ Khổng Tử cùng các bậc hiền triết và danh nhân khoa bảng nổi tiếng. Trải qua nhiều biến động lịch sử, nơi đây vẫn giữ được vẻ trang nghiêm, cổ kính với bố cục kiến trúc truyền thống đặc trưng.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Trong hành trình này, bạn sẽ lần lượt bước qua từng không gian của Văn Miếu, từ cổng Tam quan cho đến khu chính điện, khám phá những giá trị văn hóa – lịch sử được lưu giữ qua từng tấm bia, từng mái ngói. Hãy cùng bắt đầu chuyến tham quan qua những hình ảnh ngay dưới đây.
+                            
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section id="history" class="py-24 bg-stone-100 px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-bold accent-red mb-4">Dòng chảy Lịch sử</h2>
+            <div class="w-16 h-1 bg-gold mx-auto"></div>
+        </div>
+        <div class="max-w-3xl mx-auto border-l-2 border-stone-300 ml-8 md:ml-auto relative space-y-12 pb-10">
+            <div class="relative pl-8">
+                <div class="timeline-dot"></div>
+                <h4 class="text-2xl font-bold accent-red">Thế kỷ XV - Thời Lê Sơ</h4>
+                <p class="text-gray-600 mt-2">
+Vào thế kỷ XV, dưới triều đại thời Lê sơ, nền giáo dục Nho học tại Việt Nam bước vào giai đoạn phát triển rực rỡ. Đây là thời kỳ mà triều đình đặc biệt coi trọng việc đào tạo nhân tài, tổ chức thi cử quy củ và tôn vinh những người đỗ đạt cao.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Trong bối cảnh đó, Văn miếu Mao Điền được hình thành như một trung tâm văn hóa – giáo dục quan trọng của vùng xứ Đông. Không chỉ là nơi thờ Khổng Tử và các bậc hiền triết, Văn Miếu còn là nơi ghi danh, tôn vinh những người đã đóng góp cho nền học vấn và khoa bảng nước nhà.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Từ đây, nhiều thế hệ sĩ tử đã nuôi dưỡng chí hướng học tập, rèn luyện để bước vào con đường khoa cử, góp phần xây dựng và phát triển đất nước. Những tấm bia đá, những công trình kiến trúc còn lưu giữ đến ngày nay chính là minh chứng sống động cho một thời kỳ đề cao tri thức và đạo học.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Hành trình lịch sử ấy không chỉ phản ánh sự phát triển của giáo dục, mà còn thể hiện sâu sắc truyền thống hiếu học – một giá trị vẫn được gìn giữ và phát huy cho đến ngày nay.
+
+</p>
+            </div>
+            <div class="relative pl-8">
+                <div class="timeline-dot"></div>
+                <h4 class="text-2xl font-bold accent-red">Năm 1802 - Thời Nguyễn</h4>
+                <p class="text-gray-600 mt-2">
+Bước sang thời thời Nguyễn, dưới triều vua Gia Long, đất nước dần ổn định sau nhiều năm biến động. Nhà Nguyễn tiếp tục duy trì hệ thống Nho học và khoa cử, coi trọng việc tuyển chọn nhân tài để phục vụ triều đình.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Trong bối cảnh đó, Văn miếu Mao Điền được quan tâm trùng tu và gìn giữ. Đến thời vua Minh Mạng – người nổi tiếng với việc cải cách hành chính và củng cố giáo dục – các hoạt động tôn vinh Nho học càng được chú trọng hơn.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Văn Miếu không chỉ là nơi thờ Khổng Tử mà còn là điểm đến của sĩ tử trước mỗi kỳ thi. Những bước chân tìm đến nơi đây mang theo khát vọng đỗ đạt, nối tiếp truyền thống khoa bảng lâu đời của dân tộc.
+</p>
+            </div>
+            <div class="relative pl-8">
+                <div class="timeline-dot"></div>
+                <h4 class="text-2xl font-bold accent-red">Giai đoạn chiến tranh – Dấu ấn biến động lịch sử</h4>
+                <p class="text-gray-600 mt-2">
+Khi đất nước bước vào thời kỳ biến động, đặc biệt từ cuối thế kỷ XIX với sự xâm lược của Thực dân Pháp xâm lược Việt Nam, nhiều di tích lịch sử, trong đó có Văn miếu Mao Điền, dần bị ảnh hưởng.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Đến thế kỷ XX, qua các cuộc kháng chiến như Kháng chiến chống Pháp và Kháng chiến chống Mỹ, di tích chịu nhiều tác động của chiến tranh. Không gian xưa bị tàn phá, nhiều hạng mục xuống cấp theo thời gian.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Tuy vậy, tinh thần hiếu học và giá trị văn hóa mà Văn Miếu đại diện vẫn không bị mất đi. Nó tiếp tục tồn tại trong ký ức và ý thức gìn giữ của người dân địa phương.
+</p>
+            </div>
+            <div class="relative pl-8">
+                <div class="timeline-dot"></div>
+                <h4 class="text-2xl font-bold accent-red">Thời hiện đại – Phục dựng và tiếp nối</h4>
+                <p class="text-gray-600 mt-2">
+Sau khi đất nước thống nhất, đặc biệt từ thời kỳ Đổi Mới, việc bảo tồn di sản văn hóa ngày càng được chú trọng. Văn miếu Mao Điền đã được phục dựng, tôn tạo với quy mô lớn, dựa trên kiến trúc truyền thống vốn có.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Ngày nay, nơi đây không chỉ là một di tích lịch sử, mà còn là biểu tượng cho truyền thống hiếu học của vùng đất Hải Dương – quê hương của nhiều danh nhân như Chu Văn An hay Mạc Đĩnh Chi.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Mỗi mùa xuân, dòng người lại tìm về Văn Miếu để dâng hương, xin chữ, cầu học hành đỗ đạt – như một cách tiếp nối mạch chảy tri thức đã kéo dài suốt hàng trăm năm lịch sử.
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tour Section -->
+    <section id="tour" class="py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold accent-red">Hành trình khám phá </h2>
+                <p class="mt-4 text-gray-500 uppercase tracking-widest text-sm">
+<div style="width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <video autoplay muted loop controls playsinline style="width: 100%; display: block; object-fit: cover;">
+        <source src="https://github.com/nguyenvanduy1668-oss/vanmieutour/raw/refs/heads/main/V%C4%83n%20mi%E1%BA%BFu%20Mao%20%C4%90i%E1%BB%81n-Trang14.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ xem video trực tiếp.
+    </video>
+</div>
+          
+                    <div class="md:col-span-5 space-y-4">
+                        <div class="inline-block bg-gold/10 text-gold px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Điểm dừng 01
+</div>
+                        <h3 class="text-4xl font-bold accent-red leading-tight">Cổng Tam Quan</h3>
+                        <p class="text-gray-600 italic leading-relaxed">
+Hành trình tham quan Văn miếu Mao Điền bắt đầu từ cổng Tam Quan – lối vào chính mang đậm dấu ấn kiến trúc truyền thống.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Cổng gồm ba lối đi tượng trưng cho những tầng bậc trong tư tưởng Nho giáo, nơi con người bước qua để tiến vào không gian của tri thức và lễ nghĩa. Ngay từ đây, bạn đã có thể cảm nhận được sự trang nghiêm và tĩnh lặng, tách biệt với nhịp sống bên ngoài.
+</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 & 3: TRÁI & PHẢI -->
+            <div class="grid md:grid-cols-2 gap-16 mb-32">
+                <!-- Video bên trái -->
+                <div class="space-y-6">
+                    <!-- VÙNG CẦN ĐIỀN LINK 2 -->
+                   
+    <img src="https://media.vietnamplus.vn/images/7d14e66442e677f2c8d22138f65ca045c0132fbfeac6e2b3c07fa3dbcea2118a112fe611b313477f300e35115ebb856c61a199a9f61b6aafe9e7dc206d88fa7e/van_mieu_mao_dien.jpg" 
+         alt="Cổng Tam Quan - Văn Miếu Mao Điền" 
+         style="width: 70%; height: 50%; object-fit: cover;">
+</div>
+                    <p class="text-xs text-yellow-600 font-bold mt-2"> </p>
+                    <h4 class="text-4xl font-bold accent-red"> Không gian sân ngoài Văn Miếu </h4>
+                    <p class="text-gray-600 italic leading-relaxed">
+Bước qua cổng, bạn sẽ đến với khu sân rộng rợp bóng cây xanh. Không gian thoáng đãng, yên bình như một khoảng “đệm”, giúp người tham quan dần hòa mình vào không khí cổ kính của Văn Miếu.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Những hàng cây, lối đi và cảnh quan nơi đây không chỉ tạo nên vẻ đẹp thanh tịnh, mà còn gợi cảm giác như đang quay ngược thời gian, trở về với chốn học hành xưa.
+</p>
+
+    <img src="https://media.vietnamplus.vn/images/0269a4d9f75e4b7b9fb93337a907b382a7e16b531efcdd5fc32aa46f0f69be8fdd93f0a5c074abc90e3bfc95c19a32fd840faa6643e570e87b4ea75a6ea4f25f3baf0aa24dfd57111e811a4b44265e78/van-mieu-mao-dien-hai-duong-8932.jpg" 
+         alt="Sân Văn Miếu Mao Điền - Hải Dương" 
+         style="width: 70%; height: 50%; object-fit: cover;">
+</div>
+                </div>
+<p class="text-xs text-yellow-600 font-bold mt-2"> </p>
+                    <h5 class="text-4xl font-bold accent-red">Nhà Bia Tiến Sĩ</h4>
+                    <p class="text-gray-600 text-sm">
+Tiến sâu hơn,hướng mắt về bên trái bạn sẽ bắt gặp khu nhà bia, nơi lưu giữ những tấm bia đá khắc tên các bậc khoa bảng. Đây chính là minh chứng rõ nét cho truyền thống hiếu học của vùng đất Hải Dương.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Mỗi tấm bia không chỉ là một cái tên, mà còn là câu chuyện về hành trình đèn sách, về ý chí và khát vọng vươn lên. Tinh thần “hiền tài là nguyên khí quốc gia” dường như vẫn còn hiện hữu rõ ràng tại không gian này.
+</p>
+
+    <img src="https://yootek.vn/wp-content/uploads/2025/05/gioi-thieuj-bia-tien-si-.jpg" 
+         alt="Bia Tiến sĩ - Văn Miếu Mao Điền" 
+         style="width: 70%; height: 50%; object-fit: cover;">
+</div>
+<div class="mt-6">
+    <h4 class="text-4xl font-bold accent-red mb-4">Cây gạo - Dấu ấn thời gian giữa không gian Văn Miếu</h4>
+    
+    <p class="text-gray-600 italic leading-relaxed mb-4">
+        Trong hành trình khám phá Văn miếu Mao Điền, có một hình ảnh khiến nhiều người dừng chân lâu hơn cả – đó là cây gạo cổ thụ đứng lặng lẽ giữa khuôn viên di tích.
+    </p>
+
+    <p class="text-lg leading-relaxed text-gray-700 text-justify mb-4">
+        Không chỉ là một phần của cảnh quan, cây gạo như một “chứng nhân lịch sử”, đã trải qua biết bao thăng trầm cùng Văn Miếu. Qua từng mùa, cây lại khoác lên mình những sắc thái khác nhau, nhưng ấn tượng nhất vẫn là khi hoa gạo nở đỏ rực, nhuộm cả một góc trời.
+    </p>
+
+    <p class="text-lg leading-relaxed text-gray-700 text-justify mb-4">
+        Màu đỏ ấy không chỉ mang vẻ đẹp tự nhiên, mà còn gợi lên hình ảnh của nhiệt huyết, của khát vọng học hành và vươn lên – giống như bao thế hệ sĩ tử từng đặt chân đến nơi đây.
+    </p>
+
+    <p class="text-lg leading-relaxed text-gray-700 text-justify mb-6">
+        Đứng dưới tán cây, giữa không gian tĩnh lặng và cổ kính, bạn có thể cảm nhận rõ sự giao thoa giữa thiên nhiên và lịch sử. Đó không chỉ là một điểm dừng chân, mà còn là nơi để lắng lại, để suy ngẫm về những giá trị đã tồn tại qua hàng trăm năm.
+    </p>
+
+   <div style="width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <video autoplay muted loop playsinline style="width: 100%; display: block; object-fit: cover;">
+        <source src="https://github.com/nguyenvanduy1668-oss/vanmieutour/raw/refs/heads/main/caygao.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ xem video trực tiếp.
+    </video>
+</div>
+</div>
+<p class="text-xs text-yellow-600 font-bold mt-2"> </p>
+                    <h5 class="text-4xl font-bold accent-red">Sân nội – Không gian chuyển tiếp </h4>
+                    <p class="text-gray-600 text-sm">
+Rời khu nhà bia, bạn sẽ bước vào sân nội – khu vực nằm ngay trước trung tâm Văn Miếu. Không gian ở đây rộng rãi, thường được sử dụng cho các nghi lễ, hoạt động văn hóa và dâng hương.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Đứng tại đây, bạn có thể cảm nhận rõ sự trang nghiêm và trật tự trong bố cục kiến trúc, tất cả đều hướng về khu chính điện phía trước
+</p>
+<div style="width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/10/12/1406781/DSC02277_11Zon.jpg" 
+         alt="Hình ảnh Văn Miếu Mao Điền" 
+         style="width: 100%; display: block; height: auto; object-fit: cover;">
+</div>
+<p class="text-xs text-yellow-600 font-bold mt-2"> </p>
+                    <h5 class="text-4xl font-bold accent-red">Chính điện – Trái tim của Văn Miếu </h4>
+                    <p class="text-gray-600 text-sm">
+Điểm dừng chân quan trọng nhất trong hành trình chính là khu chính điện – nơi linh thiêng bậc nhất của toàn bộ di tích.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Tại đây thờ Khổng Tử cùng các bậc hiền triết và danh nhân tiêu biểu của nền Nho học Việt Nam. Không gian bên trong mang vẻ trang nghiêm, cổ kính, với những chi tiết kiến trúc tinh xảo và giàu ý nghĩa.
+
+Đây cũng là nơi du khách thường dừng lại lâu nhất, thắp hương và cảm nhận sâu sắc giá trị văn hóa – tinh thần mà Văn Miếu lưu giữ.
+</p>
+<div style="width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <img src="https://github.com/nguyenvanduy1668-oss/vanmieutour/blob/main/chinhdien.jpg?raw=true" 
+         alt="Chính điện Văn Miếu Mao Điền" 
+         style="width: 100%; display: block; height: auto; object-fit: cover;">
+</div>
+
+
+<p class="text-xs text-yellow-600 font-bold mt-2"> </p>
+                    <h5 class="text-4xl font-bold accent-red">Khu thờ danh nhân – Dấu ấn tri thức Việt </h4>
+                    <p class="text-gray-600 text-sm">
+Tiếp nối phía sau là khu thờ các danh nhân khoa bảng, những người đã góp phần làm rạng danh truyền thống học hành của dân tộc.
+<p class="text-lg leading-relaxed text-gray-700 text-justify">
+Những cái tên như Chu Văn An hay Mạc Đĩnh Chi không chỉ là niềm tự hào của riêng một vùng đất, mà còn là biểu tượng cho trí tuệ và nhân cách của con ngườ Việt.
+
+</p>
+
+<figure style="width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); background-color: #f9f9f9; border: 1px solid #eee;">
+    
+    <img src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2023/3/9/base64-1678350700034517516859.png" 
+         alt="Lưỡng quốc Trạng nguyên Mạc Đĩnh Chi" 
+         style="width: 100%; display: block; height: auto; object-fit: cover;">
+    
+    <figcaption style="padding: 12px 15px; text-align: center; font-style: italic; font-size: 0.85rem; color: #555; line-height: 1.4; border-top: 1px solid #ddd;">
+        Lưỡng quốc Trạng nguyên Mạc Đĩnh Chi được thờ trong Văn Miếu Mao Điền
+    </figcaption>
+    
+</figure> 
+                                          
+<figure style="width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); background-color: #f9f9f9; border: 1px solid #eee;">
+    
+    <img src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2023/3/9/base64-16783507003801546754827.png" 
+         alt="Vạn thế sư biểu Chu Văn An" 
+         style="width: 100%; display: block; height: auto; object-fit: cover;">
+    
+    <figcaption style="padding: 12px 15px; text-align: center; font-style: italic; font-size: 0.85rem; color: #555; line-height: 1.4; border-top: 1px solid #ddd;">
+        Vạn thế sư biểu Chu Văn An được thờ trong Văn Miếu Mao Điền
+    </figcaption>
+    
+</figure>
+
+
+<figure style="width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); background-color: #f9f9f9; border: 1px solid #eee;">
+    
+    <img src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2023/3/9/base64-1678350700728208014725.png" 
+         alt="Anh hùng Dân tộc, Danh nhân Văn hóa Thế giới Nguyễn Trãi" 
+         style="width: 100%; display: block; height: auto; object-fit: cover;">
+    
+    <figcaption style="padding: 12px 15px; text-align: center; font-style: italic; font-size: 0.85rem; color: #555; line-height: 1.4; border-top: 1px solid #ddd;">
+        Anh hùng Dân tộc, Danh nhân Văn hóa Thế giới Nguyễn Trãi được thờ trong Văn Miếu
+    </figcaption>
+    
+</figure>
+                   
+</div>
+ <div style="margin: 60px auto 100px; text-align: center; max-width: 800px; padding: 0 25px; border-top: 1px double #d4af37; padding-top: 40px;">
+
+    <p style="font-size: 1.1rem; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 30px;">
+        Những anh linh, những bậc hiền tài được phụng thờ tại đây chính là những vì tinh tú soi sáng con đường học vấn của bao thế hệ. Bước chân ra khỏi không gian thờ tự tôn nghiêm, lòng mỗi người dường như tĩnh lặng hơn, tự hào hơn về mạch nguồn văn hóa bền bỉ của dân tộc.
+    </p>
+
+    <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.4rem; line-height: 1.6; color: #8b0000; font-style: italic; font-weight: bold; margin-bottom: 15px;">
+        "Văn Miếu Mao Điền – Nơi đạo học ngàn năm hội tụ, nơi thắp sáng khát vọng vươn lên của mảnh đất xứ Đông văn hiến."
+    </p>
+
+    <p style="margin-top: 25px; font-weight: bold; color: #aaa; letter-spacing: 3px; font-size: 0.75rem; text-transform: uppercase;">
+      
+    </p>
+
+</div>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer style="background-color: #1a1a1a; color: #ffffff; padding: 60px 20px; margin-top: 100px; text-align: center; border-top: 2px solid #d4af37;">
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        
+        <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 1.8rem; font-style: italic; margin-bottom: 20px; letter-spacing: 1px;">
+            Chuyến tham quan Văn Miếu Mao Điền
+        </h2>
+
+        <p style="font-size: 1rem; color: #aaa; margin-bottom: 15px; letter-spacing: 0.5px;">
+            Dự án: Tour tham quan Di tích Quốc gia đặc biệt Văn Miếu Mao Điền
+        </p>
+
+        <p style="font-size: 1.1rem; font-weight: bold; color: #d4af37; margin-bottom: 40px;">
+            Thực hiện bởi: Lớp 10K
+        </p>
+
+        <div style="width: 30px; height: 1px; background-color: #444; margin: 0 auto 20px;"></div>
+
+        <p style="font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 2px;">
+            &copy; 2026 Toàn bộ nội dung được bảo lưu
+        </p>
+
+    </div>
+</footer>
+    </script>
+</body>
+</html>
